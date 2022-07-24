@@ -19,8 +19,8 @@ a_real  = 2;   %Geometry Width
 b_real  = 2;   %Geometry Height
 n       = 2;   %Geometry edge sharpness, large values (above 100) might not give a good solution.
 p       = 0;   %Geometry Slope (0 to 1)
-d_real  = 1;   %Pore smallest diameter (keep at 1 do not change)
-R0_real = 1;   %Vesicle Radius (1 means the vesicle is twice the diameter)
+d_real  = 1;   %Pore smallest diameter 
+R0_real = 2;   %Vesicle Radius (1 means the vesicle is twice the diameter)
 gamma   = 0.015; %Surface Tension
 ContactAngle = @(y) pi;                %Contact Angle constant
 plott = 1; %Plot (1) or not(0)
@@ -194,7 +194,7 @@ while abs(Inc0)>1e-10
                 h4 = text((x1-Lx)*d_real,y1*d_real,['   ',num2str(thetaC1*180/pi)]);
                 h5 = plot((x1-Lx)*d_real,y1*d_real,'ro');
                 h6 = plot((x2-Lx)*d_real,y2*d_real,'ro');
-                plot(x-Lx,y,'k')
+                plot((x-Lx)*d_real,y*d_real,'k')
                 axis equal
                 title('Contact Angle at each Location')
                 %Plot Pressure
@@ -288,7 +288,7 @@ while abs(Inc0)>1e-10
                 h4 = text((x1-Lx)*d_real,y1*d_real,['   ',num2str(thetaC1*180/pi)]);
                 h5 = plot((x1-Lx)*d_real,y1*d_real,'ro');
                 h6 = plot((x2-Lx)*d_real,y2*d_real,'ro');
-                plot(x-Lx,y,'k')
+                plot((x-Lx)*d_real,y*d_real,'k')
                 axis equal
                 title('Contact Angle at each Location')
                 %Plot Pressure

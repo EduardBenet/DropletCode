@@ -19,6 +19,7 @@ $$r(z) = a\left(1+\frac{m}{b}z\right)\left(\left(1-\left|\frac{z}{b}\right|\righ
 
 The physical properties of the droplet are then defined with these varibles
 
+| Variable | Description |
 | --- | ----------- |
 |```R0_real```|Vesicle Radius|
 |```gamma```|Surface Tension (used only in post-processing)|
@@ -26,11 +27,12 @@ The physical properties of the droplet are then defined with these varibles
 
 Additional plotting paramters
 
+| Variable | Description |
 | --- | ----------- |
 |plott|Plot (1) or not(0)|
 
 ## Running the code
-To run the code, simply open and run `MAINCODE.m`. The code has a top section tha allows changing the input paramteres above.
+To run the code, simply open and run [`MAINCODE.m`](https://github.com/EduardBenet/DropletCode/blob/main/MAINCODE.m). The code has a top section tha allows changing the input paramteres above.
 
 Once the code starts running it performs the following operations:
 * The code then normalizes all values based on ```d_real``` and ```$\gamma$```

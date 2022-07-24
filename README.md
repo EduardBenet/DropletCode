@@ -17,6 +17,9 @@ $$r(z) = a\left(1+\frac{m}{b}z\right)\left(\left(1-\left|\frac{z}{b}\right|\righ
 |```p```|Geometry Slope (0 to 1)|
 |```d_real```|Pore smallest diameter|
 
+Ideally, keep the value of ```d_real = 1``` and work with normalized units.
+
+### Droplet properties
 The physical properties of the droplet are then defined with these varibles
 
 | Variable | Description |
@@ -35,7 +38,7 @@ Additional plotting paramters
 To run the code, simply open and run [`MAINCODE.m`](https://github.com/EduardBenet/DropletCode/blob/main/MAINCODE.m). The code has a top section tha allows changing the input paramteres above.
 
 Once the code starts running it performs the following operations:
-* The code then normalizes all values based on ```d_real``` and ```$\gamma$```
+* The code then normalizes all values based on ```d_real``` and ```gamma```
 * Solves the equilibrium problem for each position of the droplet
 * Returns a normalized value for Pressure, Energy, and Drop position inside the pore
 
@@ -44,6 +47,9 @@ Since the problem works controlling the bottom edge of the vesicle the second pa
 
 ## Results
 The results produced by the code are normalized. You can interpret them as follows:
-* $CritPress = \frac{\Delta P}{2\gamma}$
-* $E = \frac{\Delta E}{\gamma d_real^2}$
+| Variable | Description |
+| --- | ----------- |
+|Normalized Presure difference|$CritPress = \frac{\Delta P}{2\gamma}$|
+|Normalized Eenergy difference|$E = \frac{\Delta E}{\gamma d_{real}^2}$|
+|Center of mass of the drop inside the pore|$Position$|
 

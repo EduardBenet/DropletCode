@@ -1,4 +1,15 @@
 function Fk = Residual3D2(U,param,ContactAngle)
+% RESIDUAL3D2 This function solves for the equilibrium position of a
+% vesicle inside the pore. The returned vector is as follows:
+% U(1) = radius top
+% U(2) = radius bottom
+% U(3) = angle top
+% U(4) = angle bottom
+% U(5) = position inside the pore
+% U(6) = pressure
+
+% All values are normalized according to the paper.
+
 a = param(1);
 b = param(2);
 y2 = param(3);
@@ -7,22 +18,22 @@ Lx = param(6);
 R0 = param(7);
 p  = param(9); p = p/b;
 
-if isreal(U(1)) == 0
+if ~isreal(U(1))
     U(1) = 2/R0;
 end
-if isreal(U(2)) == 0
+if ~isreal(U(2))
     U(2) = 1/R0;
 end
-if isreal(U(3)) == 0
+if ~isreal(U(3))
     U(3) = pi/2;
 end
-if isreal(U(4)) == 0
+if ~isreal(U(4))
     U(4) = pi/2;
 end
-if isreal(U(5)) == 0
+if ~isreal(U(5))
     U(5) = b;
 end
-if isreal(U(6)) == 0
+if ~isreal(U(6))
     U(6) = 0;
 end
 

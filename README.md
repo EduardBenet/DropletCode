@@ -24,15 +24,15 @@ The physical properties of the droplet are then defined with these varibles
 
 | Variable | Description |
 | --- | ----------- |
-|```R0_real```|Vesicle Radius|
+|```R0_real```|Vesicle Radius. If ```d_real=1```, a value of 1 means that the droplet is twice the pore size|
 |```gamma```|Surface Tension (used only in post-processing)|
-|ContactAngle|A function handle with the angle as a function of depth. For example: ```@(y) pi```|
+|```ContactAngle```|A function handle with the angle as a function of depth. For example: ```@(y) pi```|
 
 Additional plotting paramters
 
 | Variable | Description |
 | --- | ----------- |
-|plott|Plot (1) or not(0)|
+|```plott```|Plot (1) or not(0)|
 
 ## Running the code
 To run the code, simply open and run [`MAINCODE.m`](https://github.com/EduardBenet/DropletCode/blob/main/MAINCODE.m). The code has a top section tha allows changing the input paramteres above.

@@ -7,7 +7,7 @@ Code by E.Benet in F.Vernerey group.
 The code takes 9 input parameters in real values, and returns a non-dimensional solution of the pressure energy and position of the droplet inside the pore. The values are defined as follows:
 ### Pore geometry
 The code defines an axisymmetric pore whose profile follows the following equation:
-$$r(z) = a\left(1+\frac{m}{b}z\right)\left(\left(1-\left|\frac{z}{b}\right|\right)^n\right)^{1/n}-d_real/2$$
+$$r(z) = a\left(1+\frac{m}{b}z\right)\left(\left(1-\left|\frac{z}{b}\right|\right)^n\right)^{1/n}-\frac{d_{real}}{2}$$
 
 | Variable | Description |
 | --- | ----------- |
@@ -15,14 +15,18 @@ $$r(z) = a\left(1+\frac{m}{b}z\right)\left(\left(1-\left|\frac{z}{b}\right|\righ
 | ```b_real```|Geometry Height|
 | ```n```|Geometry edge sharpness, large values (above 100) might not give a good solution.|
 |```p```|Geometry Slope (0 to 1)|
-|d_real|Pore smallest diameter|
+|```d_real```|Pore smallest diameter|
 
 The physical properties of the droplet are then defined with these varibles
+
+| --- | ----------- |
 |```R0_real```|Vesicle Radius|
 |```gamma```|Surface Tension (used only in post-processing)|
-|ContactAngle|A function handle with the angle as a function of depth. For example: @(y) pi|
+|ContactAngle|A function handle with the angle as a function of depth. For example: ```@(y) pi```|
 
 Additional plotting paramters
+
+| --- | ----------- |
 |plott|Plot (1) or not(0)|
 
 ## Running the code

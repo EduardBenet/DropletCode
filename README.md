@@ -6,7 +6,7 @@ Code by E.Benet in F.Vernerey group.
 The code takes 9 input parameters in real values, and returns a non-dimensional solution of the pressure energy and position of the droplet inside the pore. The values are defined as follows:
 ### Pore geometry
 The code defines an axisymmetric pore whose profile follows the following equation:
-$$r(z) = a\left(1+\frac{m}{b}z\right)\left(\left(1-\abs{\frac{z}{b}}\right)^n\right)^{1/n}-d_real/2$$
+$$r(z) = a\left(1+\frac{m}{b}z\right)\left(\left(1-\left|{\frac{z}{b}\right|\right)^n\right)^{1/n}-d_real/2$$
 | ```a_real```|Geometry Width|
 | ```b_real```|Geometry Height|
 | ```n```|Geometry edge sharpness, large values (above 100) might not give a good solution.|
